@@ -60,12 +60,12 @@ struct StateModel: ReducibleStateWithEffects {
             return (self.with(explanation: explanation), [])
         case (.editing, .submitButtonTapped):
             return (self.with(state: .submitting), [.submitRating(rating: rating, explanation: explanation)])
-        case (.editing, .skipButtonTapped):
+        case (.editing, .skipButtonTapped),
+             (.initial, .skipButtonTapped):
             return (self.with(state: .skipped), [])
         case (.submitting, .submitSucceeded):
             return (self.with(state: .submitted), [])
         case (.submitting, .submitFailed):
-            //TODO: show error alert?
             return (self.with(state: .editing), [])
         default:
             return (self, [])

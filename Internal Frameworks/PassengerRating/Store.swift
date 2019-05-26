@@ -132,14 +132,14 @@ private extension StateModel {
 
     var submitButtonEnabled: Bool {
         return state == .editing
-            && (rating > 3 || isExpanationFilled)
+            && (rating > 3 || isExplanationFilled)
     }
 
     var starRatingEnabled: Bool {
         return state == .initial || state == .editing
     }
 
-    private var isExpanationFilled: Bool {
+    private var isExplanationFilled: Bool {
         guard let explanation = explanation else { return false }
         return !explanation.isEmpty
     }
