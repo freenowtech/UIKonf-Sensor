@@ -1,0 +1,6 @@
+framework module Pods_PassengerRatingTests {
+  umbrella header "Pods-PassengerRatingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

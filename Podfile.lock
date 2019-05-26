@@ -1,0 +1,61 @@
+PODS:
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxFeedback (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - RxTest (5.0.0):
+    - RxSwift (~> 5)
+  - SDWebImage/Core (4.4.6)
+  - Sensor (0.1.0):
+    - RxCocoa (~> 5.0.0)
+    - RxFeedback (~> 3.0.0)
+    - RxSwift (~> 5.0.0)
+  - SensorTest (0.1.0):
+    - RxCocoa (~> 5.0.0)
+    - RxSwift (~> 5.0.0)
+    - RxTest (~> 5.0.0)
+  - SnapKit (5.0.0)
+  - "UITextView+Placeholder (1.2.1)"
+
+DEPENDENCIES:
+  - RxCocoa (~> 5.0)
+  - RxSwift (~> 5.0)
+  - SDWebImage/Core (~> 4.4)
+  - Sensor (= 0.1.0)
+  - SensorTest (= 0.1.0)
+  - SnapKit (~> 5.0)
+  - "UITextView+Placeholder (~> 1.2)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RxCocoa
+    - RxFeedback
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - SDWebImage
+    - Sensor
+    - SensorTest
+    - SnapKit
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  Sensor: 2b27260d12ee2769ccd42aefce6a53acfc90bae7
+  SensorTest: 906237bb257c361c05da5a7caa298e3690d0d1a9
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
+
+PODFILE CHECKSUM: 4222953155ff27df5ccb31fa4667372718bc1a1d
+
+COCOAPODS: 1.6.1
