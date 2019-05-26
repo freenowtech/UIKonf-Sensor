@@ -256,7 +256,7 @@ private extension View {
         starRatingView.filledStarImage = UIImage(named: model.filledStarColor.rawValue)
         questionLabel.text = "How was your job with \(model.passengerName)?"
         passengerImageView.sd_setImage(with: URL(string: model.passengerImageURL),
-                                       placeholderImage: UIImage(named: "ic_profile_placeholder"))
+                                       placeholderImage: UIImage(named: "passenger"))
         feedbackTitleLabel.text = model.title.rawValue
         feedbackTextLabel.text = model.text.rawValue
         submitButton.setTitle(model.submitButtonTitle.rawValue, for: .normal)
