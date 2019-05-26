@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
 
     @objc private func presentPassengerRatingViewController() {
         let passengerRatincCoordinator = PassengerRating.Coordinator(makeDestinationViewController: YeahViewController.init)
-        let passengerRatingViewController = passengerRatincCoordinator.makeViewController(passenger: Passenger(imageURL: "TODO", name: "Mounir"))
+        let passengerRatingViewController = passengerRatincCoordinator.makeViewController(passenger: Passenger(imageURL: "TODO", name: "Pauline"))
         present(passengerRatingViewController, animated: true, completion: nil)
     }
 
