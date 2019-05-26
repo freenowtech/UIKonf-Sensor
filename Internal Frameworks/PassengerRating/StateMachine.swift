@@ -42,7 +42,7 @@ enum Effect: TriggerableEffect {
 
 enum State: Hashable {
     //TODO: Add all needed states
-    case initial, editing, submitted, skipped
+    case initial, submitted, skipped
 }
 
 struct StateModel: ReducibleStateWithEffects {
@@ -53,9 +53,7 @@ struct StateModel: ReducibleStateWithEffects {
 
     func reduce(event: Event) -> (state: StateModel, effects: Set<Effect>) {
         switch (state, event) {
-        case (.initial, .ratingChanged(let rating)):
-            return (self.with(state: .editing).with(rating: rating), [])
-            //TODO: Add more state transitions
+        //TODO: Add more state transitions
         default:
             return (self, [])
         }
