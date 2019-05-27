@@ -104,7 +104,7 @@ class View: UIView, CancelChildViewProtocol {
         let starRatingView = StarRatingWidget()
         return starRatingView
     }()
-    private let feedbackTitleLabel: UILabel = {
+    private let rankingTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.textColor = UIColor.darkGreyBlue
@@ -159,7 +159,7 @@ class View: UIView, CancelChildViewProtocol {
         addSubview(scrollView)
         scrollView.addSubview(contentView)
         [skipButton, passengerImageView, questionLabel, starRatingView,
-         feedbackTitleLabel, feedbackTextLabel, explanationTextView, submitButton].forEach { contentView.addSubview($0) }
+         rankingTitleLabel, feedbackTextLabel, explanationTextView, submitButton].forEach { contentView.addSubview($0) }
     }
 
     private func setupConstraints() {
@@ -190,13 +190,13 @@ class View: UIView, CancelChildViewProtocol {
             make.centerX.equalToSuperview()
             make.top.equalTo(questionLabel.snp.bottom).offset(30)
         }
-        feedbackTitleLabel.snp.makeConstraints { make in
+        rankingTitleLabel.snp.makeConstraints { make in
             make.top.equalTo(starRatingView.snp.bottom).offset(32)
             make.leading.trailing.equalToSuperview().inset(73)
             make.height.equalTo(22) // avoid moving layout on small devices
         }
         feedbackTextLabel.snp.makeConstraints { make in
-            make.top.equalTo(feedbackTitleLabel.snp.bottom)
+            make.top.equalTo(rankingTitleLabel.snp.bottom)
             make.leading.trailing.equalToSuperview().inset(22)
             make.height.equalTo(22) // avoid moving layout on small devices
         }
@@ -257,8 +257,8 @@ private extension View {
         questionLabel.text = "How was your job with \(model.passengerName)?"
         passengerImageView.sd_setImage(with: URL(string: model.passengerImageURL),
                                        placeholderImage: UIImage(named: "passenger"))
-        feedbackTitleLabel.text = model.title.rawValue
-        feedbackTextLabel.text = model.text.rawValue
+        rankingTitleLabel.text = model.ranking.rawValue
+        feedbackTextLabel.text = model.feedbackRequired.rawValue
         submitButton.setTitle(model.submitButtonTitle.rawValue, for: .normal)
         submitButton.setTitle(model.submitButtonTitle.rawValue, for: .disabled)
         explanationTextView.placeholder = model.explanationPlaceholder.rawValue

@@ -11,26 +11,28 @@ import Foundation
 struct ViewModel: Equatable {
     let passengerImageURL: String
     let passengerName: String
-    let title: Title
-    let text: Text
+    let ranking: RankingText
+    let feedbackRequired: FeedbackText
     let filledStarColor: StarColor
     let showExplanationAndSubmit: Bool
     let explanationPlaceholder: ExplanationPlaceholder
     let submitButtonEnabled: Bool
     let submitButtonTitle: SubmitButtonTitle
     let starRatingEnabled: Bool
-    
+}
+
+extension ViewModel {
     static func initial(passengerImageURL: String = "",
                         passengerName: String = "",
-                        title: Title = .ok,
-                        text: Text = .empty,
+                        ranking: RankingText = .ok,
+                        feedbackRequired: FeedbackText = .empty,
                         filledStarColor: StarColor = .yellow,
                         showExplanationAndSubmit: Bool = false,
                         explanationPlaceholder: ExplanationPlaceholder = .optional,
                         submitButtonEnabled: Bool = false,
                         submitButtonTitle: SubmitButtonTitle = .submit,
                         starRatingEnabled: Bool = true) -> ViewModel {
-        return ViewModel(passengerImageURL: passengerImageURL, passengerName: passengerName, title: title, text: text, filledStarColor: filledStarColor, showExplanationAndSubmit: showExplanationAndSubmit, explanationPlaceholder: explanationPlaceholder, submitButtonEnabled: submitButtonEnabled, submitButtonTitle: submitButtonTitle, starRatingEnabled: starRatingEnabled)
+        return ViewModel(passengerImageURL: passengerImageURL, passengerName: passengerName, ranking: ranking, feedbackRequired: feedbackRequired, filledStarColor: filledStarColor, showExplanationAndSubmit: showExplanationAndSubmit, explanationPlaceholder: explanationPlaceholder, submitButtonEnabled: submitButtonEnabled, submitButtonTitle: submitButtonTitle, starRatingEnabled: starRatingEnabled)
         
     }
 
@@ -40,7 +42,7 @@ struct ViewModel: Equatable {
         case green = "ic_green_circle"
     }
 
-    enum Title: String {
+    enum RankingText: String {
         case veryBad = "Very bad"
         case bad  = "Bad"
         case ok = "Ok"
@@ -49,7 +51,7 @@ struct ViewModel: Equatable {
         case empty = ""
     }
 
-    enum Text: String {
+    enum FeedbackText: String {
         case empty = ""
         case requestExplanation = "Please let us know what happened."
     }

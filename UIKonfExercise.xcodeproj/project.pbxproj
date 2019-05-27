@@ -359,12 +359,12 @@
 		D74CED2922959E640038F322 /* PassengerRating */ = {
 			isa = PBXGroup;
 			children = (
+				D74CED2122959A9E0038F322 /* StateMachine.swift */,
+				D74CECE92292D5210038F322 /* Store.swift */,
+				D74CED1F22957A2D0038F322 /* ViewModel.swift */,
 				D74CECED2293F6920038F322 /* Coordinator.swift */,
 				D74CECDE2292A9A00038F322 /* ViewController.swift */,
 				D74CECE02292A9ED0038F322 /* View.swift */,
-				D74CED1F22957A2D0038F322 /* ViewModel.swift */,
-				D74CECE92292D5210038F322 /* Store.swift */,
-				D74CED2122959A9E0038F322 /* StateMachine.swift */,
 				D74CECEB2292DF6E0038F322 /* UseCase.swift */,
 				D74CED2A22959E640038F322 /* PassengerRating.h */,
 				D74CED2B22959E640038F322 /* Info.plist */,

@@ -70,8 +70,8 @@ private extension ViewModel {
     init(stateModel: StateModel) {
         passengerImageURL = stateModel.passenger.imageURL
         passengerName = stateModel.passenger.name
-        title = stateModel.title
-        text = stateModel.text
+        ranking = stateModel.title
+        feedbackRequired = stateModel.text
         filledStarColor = stateModel.filledStarColor
         showExplanationAndSubmit = stateModel.showExplanationAndSubmit
         explanationPlaceholder = stateModel.explanationPlaceholder
@@ -83,7 +83,7 @@ private extension ViewModel {
 
 private extension StateModel {
 
-    var title: ViewModel.Title {
+    var title: ViewModel.RankingText {
         switch rating {
         case 1:
             return .veryBad
@@ -100,7 +100,7 @@ private extension StateModel {
         }
     }
 
-    var text: ViewModel.Text {
+    var text: ViewModel.FeedbackText {
         switch rating {
         case 1, 2, 3:
             return .requestExplanation
@@ -145,7 +145,7 @@ private extension StateModel {
     }
 
     var submitButtonTitle: ViewModel.SubmitButtonTitle {
-        return state == .submitting ? .submitting : .submit
+        return state == .waitingForResponse ? .submitting : .submit
     }
 
 }

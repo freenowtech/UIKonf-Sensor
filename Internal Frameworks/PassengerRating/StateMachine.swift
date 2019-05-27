@@ -41,7 +41,7 @@ enum Effect: TriggerableEffect {
 }
 
 enum State: Hashable {
-    case initial, editing, submitting, submitted, skipped
+    case initial, editing, waitingForResponse, submitted, skipped
 }
 
 struct StateModel: ReducibleStateWithEffects {
@@ -53,20 +53,13 @@ struct StateModel: ReducibleStateWithEffects {
     func reduce(event: Event) -> (state: StateModel, effects: Set<Effect>) {
         switch (state, event) {
         case (.initial, .ratingChanged(let rating)):
-            return (self.with(state: .editing).with(rating: rating), [])
+            return (stateModel(state: .editing).stateModel(rating: rating), [])
         case (.editing, .ratingChanged(let rating)):
-            return (self.with(rating: rating), [])
+            return (stateModel(rating: rating), [])
         case (.editing, .explanationChanged(let explanation)):
-            return (self.with(explanation: explanation), [])
+            return (stateModel(explanation: explanation), [])
         case (.editing, .submitButtonTapped):
-            return (self.with(state: .submitting), [.submitRating(rating: rating, explanation: explanation)])
-        case (.editing, .skipButtonTapped),
-             (.initial, .skipButtonTapped):
-            return (self.with(state: .skipped), [])
-        case (.submitting, .submitSucceeded):
-            return (self.with(state: .submitted), [])
-        case (.submitting, .submitFailed):
-            return (self.with(state: .editing), [])
+            return (stateModel(state: .waitingForResponse), [])
         default:
             return (self, [])
         }
@@ -81,19 +74,19 @@ struct StateModel: ReducibleStateWithEffects {
 // Convenience builder methods
 private extension StateModel {
 
-    func with(state: State) -> StateModel {
+    func stateModel(state: State) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
-    func with(passenger: Passenger) -> StateModel {
+    func stateModel(passenger: Passenger) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
-    func with(rating: Float) -> StateModel {
+    func stateModel(rating: Float) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
-    func with(explanation: String?) -> StateModel {
+    func stateModel(explanation: String?) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
