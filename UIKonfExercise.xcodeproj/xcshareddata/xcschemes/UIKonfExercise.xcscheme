@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D74CECBC2292A3B80038F322"
-               BuildableName = "UIKonfExerciseTests.xctest"
-               BlueprintName = "UIKonfExerciseTests"
+               BlueprintIdentifier = "D74CED2F22959E640038F322"
+               BuildableName = "PassengerRatingTests.xctest"
+               BlueprintName = "PassengerRatingTests"
                ReferencedContainer = "container:UIKonfExercise.xcodeproj">
             </BuildableReference>
          </TestableReference>
