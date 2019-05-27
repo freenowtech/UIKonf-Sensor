@@ -39,7 +39,6 @@ enum Store {
                                        inputEvents: inputEvents,
                                        context: context)
             .map(Store.Outputs.init(stateModel:))
-            .distinctUntilChanged()
     }
 
 }
