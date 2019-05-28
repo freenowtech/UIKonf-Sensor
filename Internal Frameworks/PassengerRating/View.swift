@@ -257,8 +257,8 @@ private extension View {
         questionLabel.text = "How was your job with \(model.passengerName)?"
         passengerImageView.sd_setImage(with: URL(string: model.passengerImageURL),
                                        placeholderImage: UIImage(named: "passenger"))
-        feedbackTitleLabel.text = model.title.rawValue
-        feedbackTextLabel.text = model.text.rawValue
+        feedbackTitleLabel.text = model.rating.rawValue
+        feedbackTextLabel.text = model.feedback.rawValue
         submitButton.setTitle(model.submitButtonTitle.rawValue, for: .normal)
         submitButton.setTitle(model.submitButtonTitle.rawValue, for: .disabled)
         explanationTextView.placeholder = model.explanationPlaceholder.rawValue

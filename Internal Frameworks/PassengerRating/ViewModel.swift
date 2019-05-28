@@ -11,8 +11,8 @@ import Foundation
 struct ViewModel: Equatable {
     let passengerImageURL: String
     let passengerName: String
-    let title: Title
-    let text: Text
+    let rating: RatingTitle
+    let feedback: FeedbackTitle
     let filledStarColor: StarColor
     let showExplanationAndSubmit: Bool
     let explanationPlaceholder: ExplanationPlaceholder
@@ -24,15 +24,15 @@ struct ViewModel: Equatable {
 extension ViewModel {
     static func initial(passengerImageURL: String = "",
                         passengerName: String = "",
-                        title: Title = .ok,
-                        text: Text = .empty,
+                        ratingTitle: RatingTitle = .ok,
+                        ratingText: FeedbackTitle = .empty,
                         filledStarColor: StarColor = .yellow,
                         showExplanationAndSubmit: Bool = false,
                         explanationPlaceholder: ExplanationPlaceholder = .optional,
                         submitButtonEnabled: Bool = false,
                         submitButtonTitle: SubmitButtonTitle = .submit,
                         starRatingEnabled: Bool = true) -> ViewModel {
-        return ViewModel(passengerImageURL: passengerImageURL, passengerName: passengerName, title: title, text: text, filledStarColor: filledStarColor, showExplanationAndSubmit: showExplanationAndSubmit, explanationPlaceholder: explanationPlaceholder, submitButtonEnabled: submitButtonEnabled, submitButtonTitle: submitButtonTitle, starRatingEnabled: starRatingEnabled)
+        return ViewModel(passengerImageURL: passengerImageURL, passengerName: passengerName, rating: ratingTitle, feedback: ratingText, filledStarColor: filledStarColor, showExplanationAndSubmit: showExplanationAndSubmit, explanationPlaceholder: explanationPlaceholder, submitButtonEnabled: submitButtonEnabled, submitButtonTitle: submitButtonTitle, starRatingEnabled: starRatingEnabled)
         
     }
 
@@ -42,7 +42,7 @@ extension ViewModel {
         case green = "ic_green_circle"
     }
 
-    enum Title: String {
+    enum RatingTitle: String {
         case veryBad = "Very bad"
         case bad  = "Bad"
         case ok = "Ok"
@@ -51,7 +51,7 @@ extension ViewModel {
         case empty = ""
     }
 
-    enum Text: String {
+    enum FeedbackTitle: String {
         case empty = ""
         case requestExplanation = "Please let us know what happened."
     }

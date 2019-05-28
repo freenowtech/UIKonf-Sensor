@@ -70,8 +70,8 @@ private extension ViewModel {
     init(stateModel: StateModel) {
         passengerImageURL = stateModel.passenger.imageURL
         passengerName = stateModel.passenger.name
-        title = stateModel.title
-        text = stateModel.text
+        rating = stateModel.ratingTitle
+        feedback = stateModel.feedbackTitle
         filledStarColor = stateModel.filledStarColor
         showExplanationAndSubmit = stateModel.showExplanationAndSubmit
         explanationPlaceholder = stateModel.explanationPlaceholder
@@ -98,11 +98,11 @@ private extension ViewModel {
 */
 private extension StateModel {
  
-    var title: ViewModel.Title {
+    var ratingTitle: ViewModel.RatingTitle {
         return .empty
     }
 
-    var text: ViewModel.Text {
+    var feedbackTitle: ViewModel.FeedbackTitle {
         return .empty
     }
 

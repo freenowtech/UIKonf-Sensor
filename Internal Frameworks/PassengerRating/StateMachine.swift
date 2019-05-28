@@ -42,7 +42,7 @@ enum Effect: TriggerableEffect {
 
 enum State: Hashable {
     //TODO: Add all needed states
-    case initial, submitted, skipped
+    case initial, editing, waitingForResponse, submitted, skipped
 }
 
 struct StateModel: ReducibleStateWithEffects {
