@@ -19,7 +19,9 @@ struct ViewModel: Equatable {
     let submitButtonEnabled: Bool
     let submitButtonTitle: SubmitButtonTitle
     let starRatingEnabled: Bool
+}
     
+extension ViewModel {
     static func initial(passengerImageURL: String = "",
                         passengerName: String = "",
                         title: Title = .ok,
