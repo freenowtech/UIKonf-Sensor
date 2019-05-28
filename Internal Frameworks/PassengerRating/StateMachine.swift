@@ -68,19 +68,19 @@ struct StateModel: ReducibleStateWithEffects {
 // Convenience builder methods
 private extension StateModel {
 
-    func with(state: State) -> StateModel {
+    func stateModel(state: State) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
-    func with(passenger: Passenger) -> StateModel {
+    func stateModel(passenger: Passenger) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
-    func with(rating: Float) -> StateModel {
+    func stateModel(rating: Float) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
-    func with(explanation: String?) -> StateModel {
+    func stateModel(explanation: String?) -> StateModel {
         return StateModel(state: state, passenger: passenger, rating: rating, explanation: explanation)
     }
 
