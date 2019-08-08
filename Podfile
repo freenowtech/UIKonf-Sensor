@@ -21,10 +21,10 @@ end
 
 target "PassengerRating" do
   shared_pods
-  pod 'Sensor', '0.1.0'
+  pod 'Sensor'
 
   target "PassengerRatingTests" do
     inherit! :search_paths
-  	pod 'SensorTest', '0.1.0'
+  	pod 'SensorTest'
   end
 end
