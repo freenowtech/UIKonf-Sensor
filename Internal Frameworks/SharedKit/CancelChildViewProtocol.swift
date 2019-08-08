@@ -1,6 +1,6 @@
 //
 //  CancelChildViewProtocol.swift
-//  mytaxiDriver
+//  UIKonfExercise
 //
 //  Created by Mounir Dellagi on 03.11.17.
 //  Copyright © 2017 Intelligent Apps GmbH. All rights reserved.

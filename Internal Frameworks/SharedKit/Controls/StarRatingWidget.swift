@@ -1,6 +1,6 @@
 //
 //  StarRatingWidget.swift
-//  mytaxiDriver
+//  UIKonfExercise
 //
 //  Created by Fabio Cuomo on 11/02/2019.
 //  Copyright © 2019 Intelligent's App. All rights reserved.

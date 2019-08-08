@@ -3,7 +3,7 @@
 //  UIKonfExercise
 //
 //  Created by Lluís Gómez on 21/05/2019.
-//  Copyright © 2019 mytaxi. All rights reserved.
+//  Copyright © 2019 Intelligent's App. All rights reserved.
 //
 
 import Foundation

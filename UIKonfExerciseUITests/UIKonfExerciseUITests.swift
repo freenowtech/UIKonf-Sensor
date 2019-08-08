@@ -3,7 +3,7 @@
 //  UIKonfExerciseUITests
 //
 //  Created by Lluís Gómez on 20/05/2019.
-//  Copyright © 2019 mytaxi. All rights reserved.
+//  Copyright © 2019 Intelligent's App. All rights reserved.
 //
 
 import XCTest
